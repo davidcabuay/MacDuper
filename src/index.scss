@@ -1,8 +1,12 @@
 #game-canvas {
-    // border: 1px solid black;
+    border: 1px solid black;
     position: relative;
     // top: 100px;
     }
+
+#game-canvas :hover {
+    transform: scale(1.5)
+}
 
 .item-image {
     height: 30px;
@@ -18,7 +22,7 @@
 }
 
 body{
-    background-image: url("../src/scripts/background.png");
+    background-image: url("../src/scripts/startback.png");
     background-size: cover;
     
     //<a href="https://www.freepik.com/free-vector/house-attic-with-old-broken-furniture-dust-web_6993965.htm#query=cartoon%20storage%20room&position=9&from_view=search&track=ais">Image by upklyak</a> on Freepik

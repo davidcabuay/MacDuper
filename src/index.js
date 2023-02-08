@@ -205,15 +205,18 @@ function createList(){
 
 const itemWidth= 50;
 const itemHeight = 50;
-
-const maxHeight = canvas.offsetHeight - itemHeight;
-const maxWidth = canvas.offsetWidth - itemWidth;
 const occupiedCoordinates = [];
 
+
 const randomCoordinate = function(){
+    const maxHeight = canvas.offsetHeight - itemHeight;
+    const maxWidth = canvas.offsetWidth - itemWidth;
     const x = Math.floor( Math.random() * maxWidth);
     const y = Math.floor( Math.random() * maxHeight);
     const r = [x,y];
+    console.log(maxHeight)
+    console.log(maxWidth)
+    console.log(r)
     if (occupiedCoordinates.some(coord => 
         coord[0] < x + itemWidth &&
         coord[0] + itemWidth > x &&
@@ -228,8 +231,9 @@ const randomCoordinate = function(){
 
 function createBoard(){
     for(let i = 0; i < itemArr.length; i++){
-        const xy = randomCoordinate();
         const item = new Image();
+        // console.log(canvas.offsetHeight)
+        const xy = randomCoordinate();
         item.src = itemArr[i].img;
         item.addEventListener('load', function(){
             ctx.drawImage(item, xy[0], xy[1], itemWidth, itemHeight);
@@ -344,13 +348,13 @@ function startTimer(timeLimit){
         limit--;
         if (foundItems.length ===listHash.length){
             clearInterval(t);
-            document.getElementById("timer").innerHTML = "YOU WON"
-            startButton.innerHTML = "START"
+            document.getElementById("timer").innerHTML = "GG"
+            // startButton.innerHTML = "START"
         }
         else if (limit<0){
             clearInterval(t);
             document.getElementById("timer").innerHTML = "GG"
-            startButton.innerHTML = "START"
+            // startButton.innerHTML = "START"
         }
     },1000)
 }
@@ -361,14 +365,17 @@ restartButton.addEventListener('click', function(){
 })
 
 startButton.addEventListener('click', startGame)
+const gamepage = document.getElementById("gamepage")
 
 function startGame(){
     //remove the startscreen
+    document.body.style.backgroundImage = "url('../src/scripts/background.png')"
+    gamepage.removeAttribute("hidden")
     //removechild
-    //coundown 3,2,1 print on screen before game start
+    //coundown 3,2,1 print on screen
     createList();
+    setTimeout(() => startTimer(20), 2000);
     createBoard();
-    setTimeout(startTimer(20), 3000);
     startButton.removeEventListener('click', startGame)
 }
 

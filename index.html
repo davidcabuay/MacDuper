@@ -9,18 +9,22 @@
     <title>Hello</title>
 </head>
 <body>
-
+    <div
     <button id="initialize">START</button>
+    
     <button id="restart">RESTART</button>
-   <h1>MacDuper</h1>
 
-    <div class="bomb">
-        <img id="bombimg" src= "/src/scripts/bomb.png" >
-        <p id="timer"></p>
+    <div id="gamepage" hidden="true">
+        <h1>MacDuper</h1>
+        <div class="bomb">
+            <img id="bombimg" src= "/src/scripts/bomb.png" >
+            <p id="timer"></p>
+        </div>
+        <div class ="listboard">
+            <figure class="listback "><ul id="reflist"><b>BOMB DEFUSAL LIST</b></ul></figure> 
+            <canvas id = "game-canvas" width = "1200%" height="480"></canvas>
+        </div>
     </div>
-    <div class ="listboard">
-        <figure class="listback "><ul id="reflist"><b>BOMB DEFUSAL LIST</b></ul></figure> 
-        <canvas id = "game-canvas" width = "640" height="480"></canvas>
-    </div>
+    
 </body>
 </html>
