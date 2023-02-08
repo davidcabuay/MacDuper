@@ -1,0 +1,70 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+#game-canvas {
+  position: relative;
+}
+
+.item-image {
+  height: 30px;
+  width: 40px;
+}
+
+#bombimg {
+  max-height: 80px;
+  height: 100%;
+  src: "../src/scripts/bomb.png";
+  position: relative;
+}
+
+body {
+  background-image: url("../src/scripts/background.png");
+  background-size: cover;
+}
+
+#timer {
+  top: 1px;
+}
+
+.listboard {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.listback {
+  display: flex;
+  background-color: rgba(244, 211, 166, 0.8);
+  color: beige;
+  width: 10 px;
+}
+
+#reflist {
+  color: black;
+  width: 220px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bomb {
+  position: relative;
+  left: 330px;
+}
+
+#timer {
+  position: absolute;
+  left: 72px;
+  top: -5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: silver;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.found {
+  text-decoration: line-through;
+}

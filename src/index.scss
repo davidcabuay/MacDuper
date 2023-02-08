@@ -1,0 +1,70 @@
+#game-canvas {
+    // border: 1px solid black;
+    position: relative;
+    // top: 100px;
+    }
+
+.item-image {
+    height: 30px;
+    width: 40px;
+}
+
+#bombimg {
+    max-height: 80px;
+    height: 100%;
+    src: "../src/scripts/bomb.png";
+    position: relative;
+    
+}
+
+body{
+    background-image: url("../src/scripts/background.png");
+    background-size: cover;
+    
+    //<a href="https://www.freepik.com/free-vector/house-attic-with-old-broken-furniture-dust-web_6993965.htm#query=cartoon%20storage%20room&position=9&from_view=search&track=ais">Image by upklyak</a> on Freepik
+
+}
+#timer{
+    top: 1px;
+}
+.listboard {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.listback {
+    display: flex;
+    background-color: rgba(244, 211, 166, 0.8);
+    color: beige;
+    width: 10 px;
+}
+
+#reflist {
+    color: black;
+    width: 220px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bomb {
+    position: relative;
+    left: 330px;
+}
+#timer {
+    position:absolute;
+    left: 72px;
+    top: -5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: silver;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.found {
+    text-decoration: line-through;
+}
