@@ -182,13 +182,13 @@ const  itemArr = [
 const backMusic = new Audio()
 backMusic.setAttribute('src', "../src/scripts/backmusic.mp3");
 const twentys = new Audio()
-twentys.setAttribute('src', "../src/scripts/20real.mp3");
+twentys.setAttribute('src', "../src/scripts/test20.mp3");
 const tens = new Audio()
-tens.setAttribute('src', "../src/scripts/10real.mp3");
+tens.setAttribute('src', "../src/scripts/10good.mp3");
 const fifteens = new Audio()
-fifteens.setAttribute('src', "../src/scripts/15real.mp3");
+fifteens.setAttribute('src', "../src/scripts/15good.mp3");
 const fives = new Audio()
-fives.setAttribute('src', "../src/scripts/5real.mp3");
+fives.setAttribute('src', "../src/scripts/5good.mp3");
 const explosion = new Audio()
 explosion.setAttribute('src', "../src/scripts/explosion.mp3");
 const victory = new Audio()
@@ -201,6 +201,12 @@ congreal.setAttribute('src', "../src/scripts/congreal.mp3");
 const missImp = new Audio()
 missImp.setAttribute('src', "../src/scripts/MissImp.mp3");
 missImp.volume = 0.1;
+const nice = new Audio()
+nice.setAttribute('src', "../src/scripts/nice.mp3");
+const omgwedie = new Audio()
+omgwedie.setAttribute('src', "../src/scripts/omgwedie.mp3");
+const death = new Audio()
+death.setAttribute('src', "../src/scripts/death.mp3");
 
 const muteButton = document.getElementById("mute");
 
@@ -214,6 +220,9 @@ muteButton.addEventListener("click", () => {
         explosion.muted === false &&
         noreal.muted === false &&
         missImp.muted === false &&
+        nice.muted === false &&
+        omgwedie.muted === false &&
+        death.muted === false &&
         congreal.muted === false){
             backMusic.muted = true;
             twentys.muted = true; 
@@ -225,6 +234,9 @@ muteButton.addEventListener("click", () => {
             noreal.muted = true; 
             congreal.muted = true;
             missImp.muted = true;
+            nice.muted = true; 
+            death.muted = true;
+            omgwedie.muted = true;
             muteButton.innerHTML = "Unmute"
         } else{
             backMusic.muted = false;
@@ -237,6 +249,9 @@ muteButton.addEventListener("click", () => {
             noreal.muted = false; 
             congreal.muted = false;
             missImp.muted = false;
+            nice.muted = false; 
+            death.muted = false;
+            omgwedie.muted = false;
             muteButton.innerHTML = "Mute"
         }
 
@@ -324,6 +339,7 @@ function pickItem(id, item) {
     const matched = match(id);
     // console.log(matched);
     if (matched !== undefined) {
+        nice.play()
         const listEntry = matched;
         console.log(listEntry)
         listEntry.className = "found";
@@ -334,6 +350,10 @@ function pickItem(id, item) {
         limit = limit - 2;
     }
 }
+
+// function currentSound(){
+//     if c
+// }
 
 function match(id) {
     let match = undefined;
@@ -352,59 +372,6 @@ function match(id) {
     return match;
 }
 
-// function createBoard(){
-//     for(let i = 0; i<itemArr.length; i++){
-//         const item = document.createElement("img");
-//         let xy = randomCoordinate();
-//         console.log(xy)
-//         // const item = new Image();
-//         // item.src = itemArr[i].img
-//         item.setAttribute("src", itemArr[i].img);
-//         item.setAttribute("data-id", itemArr[i].id);
-//         // item.className = "item-image";
-//         item.style.height = 'auto';
-//         item.style.width = 'auto';
-//         item.style.maxHeight = '100px';
-//         item.style.maxWidth = '100px';
-//         item.style.top = xy[1] + "px";
-//         item.style.left = xy[0] + "px";
-//         itemHash.push(item);
-//         item.addEventListener('click', pickItem);
-//         // canvas.appendChild(item);
-//         // ctx.drawImage(item, xy[0],xy[1])
-//         items.append(item)
-//     }
-// }
-
-// function pickItem(){
-//     const matched = match(this);
-//     if (matched!== undefined){
-//         const listEntry = matched;
-//         console.log(listEntry)
-//         listEntry.className = "found";
-//         foundItems.push(listEntry);
-//         this.removeEventListener('click', pickItem);
-//     }else{
-//         limit = limit - 2
-
-//     }
-    
-//     }
-
-
-// function match(item){
-//     let itemId = item.getAttribute('data-id')
-//     let match = undefined
-//     listHash.forEach(ele => {
-//         let listId = ele.getAttribute('data-id')
-//         if (listId === itemId){
-//             console.log(ele)
-//             match = ele
-            
-//         }
-//     })
-//     return match
-// }
 const losepage = document.getElementById("losepage")
 const winpage = document.getElementById("winpage")
 function startTimer(timeLimit){
@@ -416,6 +383,7 @@ function startTimer(timeLimit){
         if (limit===14) fifteens.play();
         if (limit===9) tens.play();
         if (limit===4) fives.play();
+        if (limit===1) omgwedie.play();
         if (foundItems.length ===listHash.length){
             clearInterval(t);
             winpage.style.display = "flex";
@@ -428,7 +396,8 @@ function startTimer(timeLimit){
             clearInterval(t);
             losepage.style.display = "flex";
             explosion.play();
-            document.getElementById("timer").innerHTML = "GG"
+            document.getElementById("timer").innerHTML = "GG";
+            setTimeout(()=> {death.play()}, 1000);
             
         }
     },1000)
