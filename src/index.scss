@@ -41,15 +41,23 @@ body{
 
 .listback {
     display: flex;
-    background-color: rgba(244, 211, 166, 0.8);
+    background-color: rgba(244, 211, 166, 0.913);
     color: beige;
     width: 10 px;
+    border-radius: 5px;
 }
 
 #reflist {
     color: black;
     width: 220px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Rajdhani;
+    font-size: medium;
+    font-size: large;
+    margin: 5px;
+}
+#listTitle {
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .bomb {
@@ -60,7 +68,7 @@ body{
     position:absolute;
     left: 72px;
     top: -5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Rajdhani;
 }
 
 h1{
@@ -69,9 +77,10 @@ h1{
     font-size: 40px;
     font-weight: bold;
     color: silver;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Teko;
     background-color: maroon;
 }
+
 
 .found {
     text-decoration: line-through;
@@ -80,24 +89,32 @@ h1{
 h2 {
     display: flex;
     justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Teko;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(68, 42, 13);
+    font-size: 60px;
 }
 
 h3 {
     display: flex;
     justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Teko;
+    font-size: 40px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(68, 42, 13);
 }
 
 #startpage {
     
     position: absolute;
-    top: 280px;
+    top: 80px;
     left: 310px;
-    height: 600px;
+    height: 800px;
     width: 1100px;
     background-size: cover;
-    margin: auto;
+    margin: 20px;
+    background-color: rgba(245, 245, 245, 0.162);
+    border-radius: 20px;
 
 }
 
@@ -110,20 +127,25 @@ h3 {
 #winpage {
     display: none;
     position: absolute;
-    left: 25%;
-    z-index: 2;
+    left: 40%;
+    z-index: 1;
     // display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
-    width: 50vw;
-    background-color: rgba(245, 245, 245, 0.464);
+    width: 22vw;
+    background-color: rgba(34, 139, 34, 0.876);
+    border-color: rgba(218, 165, 32, 0.7);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
     
 }
 #homebutton {
     z-index: 1;
     position: absolute;
     display: flex;
+    font-family: Chakra Petch;
 }
 
 .github-button {
@@ -131,12 +153,14 @@ h3 {
     justify-content: left;
     align-items: left;
     height: 50px;
+    margin: 10px;
  }
 .linkedin-button {
     display: flex;
     justify-content: left;
     align-items: left;
     height: 50px;
+    margin: 10px;
 }
 
 #navbar {
@@ -151,13 +175,17 @@ h3 {
 }
 
 #winMessage {
+    position: relative;
+    left: 28%;
     margin-top: -100px;
-    font-size: larger;
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-family: Lobster;
 }
 
 
 #homebutton {
-    background-color: #D7D0D0;
+    background-color: yellowgreen;
     border-style: solid black 2px;
     color: black;
     padding: 10px;
@@ -168,11 +196,18 @@ h3 {
     height: 60px;
     width: 175px;
     margin: 10px;
+    font-family: Chakra Petch;
+    left: 10px;
+    position: relative;
+    top: 100px;
+    left: -120px;
+    display: flex;
+    // D7D0D0
 }
 
 #initialize {
     display: flex;
-    background-color: #D7D0D0;
+    background-color: orangered;
     border-style: solid black 2px;
     color: black;
     padding: 10px;
@@ -192,24 +227,32 @@ h3 {
 #losepage {
     display: none;
     position: absolute;
-    left: 25%;
+    left: 40%;
     z-index: 1;
     // display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
-    width: 50vw;
-    background-color: rgba(245, 245, 245, 0.464);
+    width: 22vw;
+    background-color: rgba(178, 34, 34, 0.888);
+    border-color: rgba(218, 165, 32, 0.7);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
     
 }
 
 #loseMessage {
+    position: relative;
+    left: 30%;
     margin-top: -100px;
-    font-size: larger;
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-family: Lobster;
 }
 
 #losebutton {
-    background-color: #D7D0D0;
+    background-color: lightcoral;
     border-style: solid black 2px;
     color: black;
     padding: 10px;
@@ -220,9 +263,34 @@ h3 {
     height: 60px;
     width: 175px;
     margin: 10px;
+    font-family: Chakra Petch;
+    left: 10px;
+    position: relative;
+    top: 100px;
+    left: -100px;
+    
 }
 
-// font-face {
-//     font-family: 'Dimis';
-//     src: url('assets/DIMIS___.TTF');
-//   }
+
+#title {
+    font-family: Russo One;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: orangered;
+    position:relative;
+    top: -15px;
+}
+
+#mute {
+    background-color: orangered;
+    border-style: solid black 2px;
+    color: black;
+    padding: 1px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 25px;
+    width: 70px;
+    margin: 10px;
+    font-family: Chakra Petch;
+}

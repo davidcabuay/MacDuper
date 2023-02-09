@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/main.css">
     <script src="dist/main.js" type="application/javascript" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light">
     <title>MacDuper</title>
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <button id="mute">Mute</button>
     <div id="navbar">
-        <h1>MacDuper</h1>
+        <h1 id="title" hidden="true">MacDuper</h1>
         <div id="about">
         <a class="github-button" href="https://github.com/davidcabuay" target="_blank" aria-label="@andrehanna8 on GitHub">
             <img src="assets/github-mark.png">
@@ -23,8 +31,12 @@
     </div>
 </div>
 <div id="startpage">
+    <h2 id="mactitle">MacDuper</h2>
+    
+    <h3>There's a bomb in the next room and it's about to explode! </h3>
+    <h3>You are our only hope. </h3>
     <h2>Instructions</h2>
-    <h3>Select the correct items within the time limit to defuse the bomb!</h3>
+    <h3>Read the list and select the correct items to defuse the bomb!</h3>
     <h3><button id="initialize">Enter Room</button></h3>
 </div>
 
@@ -37,16 +49,15 @@
     </div>
     
     <div id="losepage">
-        <p id="loseMessage">You Died!!</p>
-        <br>
-        <button id="losebutton">Go Back To Homepage</button>
+        <p id="loseMessage">You Exploded!!</p>
+        <button id="losebutton">Exit Room</button>
     </div>
     <div class="bomb">
         <img id="bombimg" src= "assets/bomb.png" >
         <p id="timer"></p>
     </div>
     <div class ="listboard">
-        <figure class="listback "><ul id="reflist"><b>BOMB DEFUSAL LIST</b></ul></figure> 
+        <figure class="listback "><ul id="reflist"><b id="listTitle">BOMB DEFUSAL LIST</b></ul></figure> 
         <canvas id = "game-canvas" width = "1200%" height="480"></canvas>
     </div>
 </div>

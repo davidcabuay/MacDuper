@@ -63,7 +63,7 @@ const  itemArr = [
     },
     {
         name: 'pizza',
-        txt: 'With cheese, sause and dough, I am complete, A favorite food you can not wait to eat',
+        txt: 'With cheese, sauce and dough, I am complete, A favorite food you can not wait to eat',
         img: 'assets/pizza.png',
         id: 9
     },
@@ -111,7 +111,7 @@ const  itemArr = [
     },
     {
         name: 'gum',
-        txt: 'I am chewy and sticky, and I fight halitosis, I freshen your breath for your awaited kiss',
+        txt: 'I am chewy and sticky, and I fight halitosis, I freshen your breath for some minty bliss',
         img: 'assets/gum.png',
         id: 17
     },
@@ -415,12 +415,14 @@ restart1Button.addEventListener('click', function(){
 startButton.addEventListener('click', startGame);
 const gamepage = document.getElementById("gamepage");
 const startpage = document.getElementById("startpage");
+const title = document.getElementById("title")
 
 function startGame(){
     //remove the startscreen
     startpage.setAttribute("hidden", true)
     document.body.style.backgroundImage = "url('assets/background.png')"
     gamepage.removeAttribute("hidden")
+    title.removeAttribute("hidden")
     //removechild
     //coundown 3,2,1 print on screen
     backMusic.play()
