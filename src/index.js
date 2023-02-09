@@ -286,7 +286,6 @@ const itemWidth= 50;
 const itemHeight = 50;
 const occupiedCoordinates = [];
 
-
 const randomCoordinate = function(){
     const maxHeight = canvas.offsetHeight - itemHeight;
     const maxWidth = canvas.offsetWidth - itemWidth;
