@@ -1,5 +1,6 @@
 # MacDuper
 
+Play MacDuper here! https://davidcabuay.github.io/MacDuper/
 ## Background
 
 Based on the cult classic "MacGruber", the player is tasked to defuse an explosive using commonly found household items. When the game begins, the player is presented with a list of riddles that correspond to household items and the countdown timer starts. 
