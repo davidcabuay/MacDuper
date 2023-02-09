@@ -293,9 +293,7 @@ const randomCoordinate = function(){
     const x = Math.floor( Math.random() * maxWidth);
     const y = Math.floor( Math.random() * maxHeight);
     const r = [x,y];
-    console.log(maxHeight)
-    console.log(maxWidth)
-    console.log(r)
+
     if (occupiedCoordinates.some(coord => 
         coord[0] < x + itemWidth &&
         coord[0] + itemWidth > x &&
@@ -326,7 +324,6 @@ function createBoard(){
                 if (e.x - leftDistance >= xy[0] && e.x - leftDistance<= xy[0] + itemWidth &&
                     e.y - topDistance >= xy[1] && e.y - topDistance <= xy[1] + itemHeight) {
                     const id = itemArr[i].id;
-                    console.log(id)
                     pickItem(id, itemArr[i]);
                 }
             

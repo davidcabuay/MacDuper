@@ -5,7 +5,7 @@ Play MacDuper here! https://davidcabuay.github.io/MacDuper/
 
 Based on the cult classic "MacGruber", the player is tasked to defuse an explosive using commonly found household items. When the game begins, the player is presented with a list of riddles that correspond to household items and the countdown timer starts. 
 
-In an unorganized drawer filled with miscellaneous items, the player must select the items that correlates to the riddles on the given list before the timer runs out. The player must select carefully as picking the wrong item decreases the remaining time on the explosive. The objective of the game is to collect all the items to defuse the explosive within the time limit.
+The player must select the items that correlates to the riddles on the given list before the timer runs out. The player must select carefully as picking the wrong item decreases the remaining time on the explosive. The objective of the game is to collect all the items to defuse the explosive within the time limit.
 
 ## Functionality & MVPs
 
@@ -17,20 +17,19 @@ With the MacDuper game, users will be able to:
 
 In addition, this project will include:
 
-- An **About** modal describing the background and rules of the game
 - A production README
 
 
-## Wireframes
+<!-- ## Wireframes
 
-![Homepage](https://user-images.githubusercontent.com/96511730/216433903-dbec972d-e4d9-4c95-acbd-fe8b21f75aa9.png)
+![Homepage](https://user-images.githubusercontent.com/96511730/216433903-dbec972d-e4d9-4c95-acbd-fe8b21f75aa9.png) -->
 
 
-- On the top right of the page, there will be Nav links that include links to this project's Github repo, my LinkedIn and the About modal.
+- On the top right of the page, there will be Nav links that include links to this project's Github repo, my LinkedIn.
 - On the top left of the page, there will be a Sound Control/Mute button.
 - On the left of the page, there will be a list of item descriptions/riddles.
 - On the top left of the main game display, there will be an explosive that displays the remaining time.
-- On the top right of the main display, there will be a Start/Reset button.
+
 
 
 ## Technologies
@@ -52,4 +51,5 @@ The technologies that will be implemented in this project inlcudes, but not limi
 If time allows, the following updates may be included:
 
 - Add background sounds/ voice lines that correspond to the remaining time on the explosive
+- Add different levels of difficulty
 - Add different background settings
