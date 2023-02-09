@@ -179,13 +179,77 @@ const  itemArr = [
 ];
 
 
+const backMusic = new Audio()
+backMusic.setAttribute('src', "../src/scripts/backmusic.mp3");
+const twentys = new Audio()
+twentys.setAttribute('src', "../src/scripts/20real.mp3");
+const tens = new Audio()
+tens.setAttribute('src', "../src/scripts/10real.mp3");
+const fifteens = new Audio()
+fifteens.setAttribute('src', "../src/scripts/15real.mp3");
+const fives = new Audio()
+fives.setAttribute('src', "../src/scripts/5real.mp3");
+const explosion = new Audio()
+explosion.setAttribute('src', "../src/scripts/explosion.mp3");
+const victory = new Audio()
+victory.setAttribute('src', "../src/scripts/victory.mp3");
+victory.volume = 0.2;
+const noreal = new Audio()
+noreal.setAttribute('src', "../src/scripts/noreal.mp3");
+const congreal = new Audio()
+congreal.setAttribute('src', "../src/scripts/congreal.mp3");
+const missImp = new Audio()
+missImp.setAttribute('src', "../src/scripts/MissImp.mp3");
+missImp.volume = 0.1;
 
-const list = document.querySelector("#reflist")
-const items = document.querySelector("#items")
-const startButton = document.querySelector('#initialize')
-const restartButton = document.querySelector('#restart')
-const itemHash = [];
-const numItems = 5;
+const muteButton = document.getElementById("mute");
+
+muteButton.addEventListener("click", () => {
+    if (backMusic.muted === false &&
+        twentys.muted === false &&
+        fifteens.muted === false &&
+        tens.muted === false &&
+        fives.muted === false &&
+        victory.muted === false &&
+        explosion.muted === false &&
+        noreal.muted === false &&
+        missImp.muted === false &&
+        congreal.muted === false){
+            backMusic.muted = true;
+            twentys.muted = true; 
+            fifteens.muted = true; 
+            tens.muted = true; 
+            fives.muted = true; 
+            victory.muted = true; 
+            explosion.muted = true;
+            noreal.muted = true; 
+            congreal.muted = true;
+            missImp.muted = true;
+            muteButton.innerHTML = "Unmute"
+        } else{
+            backMusic.muted = false;
+            twentys.muted = false; 
+            fifteens.muted = false; 
+            tens.muted = false; 
+            fives.muted = false; 
+            victory.muted = false; 
+            explosion.muted = false;
+            noreal.muted = false; 
+            congreal.muted = false;
+            missImp.muted = false;
+            muteButton.innerHTML = "Mute"
+        }
+
+})
+
+
+const list = document.getElementById("reflist")
+const items = document.getElementById("items")
+const startButton = document.getElementById('initialize')
+const restartButton = document.querySelector('#homebutton')
+const restart1Button = document.querySelector('#losebutton')
+// const itemHash = [];
+const numItems = 3;
 const listHash = [];
 const foundItems = [];
 
@@ -266,6 +330,7 @@ function pickItem(id, item) {
         foundItems.push(listEntry);
         // item.removeEventListener('click', pickItem);
     } else {
+        noreal.play();
         limit = limit - 2;
     }
 }
@@ -340,21 +405,31 @@ function match(id) {
 //     })
 //     return match
 // }
-
+const losepage = document.getElementById("losepage")
+const winpage = document.getElementById("winpage")
 function startTimer(timeLimit){
     limit = timeLimit
+    twentys.play();
     const t = setInterval(function(){
         document.getElementById("timer").innerHTML= limit;
         limit--;
+        if (limit===14) fifteens.play();
+        if (limit===9) tens.play();
+        if (limit===4) fives.play();
         if (foundItems.length ===listHash.length){
             clearInterval(t);
+            winpage.style.display = "flex";
+            victory.play();
             document.getElementById("timer").innerHTML = "GG"
-            // startButton.innerHTML = "START"
+            setTimeout(()=> {congreal.play()}, 1000);
+            
         }
         else if (limit<0){
             clearInterval(t);
+            losepage.style.display = "flex";
+            explosion.play();
             document.getElementById("timer").innerHTML = "GG"
-            // startButton.innerHTML = "START"
+            
         }
     },1000)
 }
@@ -364,17 +439,26 @@ restartButton.addEventListener('click', function(){
     return false;
 })
 
-startButton.addEventListener('click', startGame)
-const gamepage = document.getElementById("gamepage")
+restart1Button.addEventListener('click', function(){
+    window.location.reload();
+    return false;
+})
+startButton.addEventListener('click', startGame);
+const gamepage = document.getElementById("gamepage");
+const startpage = document.getElementById("startpage");
 
 function startGame(){
     //remove the startscreen
+    startpage.setAttribute("hidden", true)
     document.body.style.backgroundImage = "url('../src/scripts/background.png')"
     gamepage.removeAttribute("hidden")
     //removechild
     //coundown 3,2,1 print on screen
+    backMusic.play()
     createList();
-    setTimeout(() => startTimer(20), 2000);
+    setTimeout(() => {startTimer(20);
+                        backMusic.pause()
+                        missImp.play()}, 2000);
     createBoard();
     startButton.removeEventListener('click', startGame)
 }

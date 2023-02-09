@@ -6,25 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/main.css">
     <script src="dist/main.js" type="application/javascript" defer></script>
-    <title>Hello</title>
+    <title>MacDuper</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <div
-    <button id="initialize">START</button>
-    
-    <button id="restart">RESTART</button>
-
-    <div id="gamepage" hidden="true">
+    <button id="mute">Mute</button>
+    <div id="navbar">
         <h1>MacDuper</h1>
-        <div class="bomb">
-            <img id="bombimg" src= "/src/scripts/bomb.png" >
-            <p id="timer"></p>
-        </div>
-        <div class ="listboard">
-            <figure class="listback "><ul id="reflist"><b>BOMB DEFUSAL LIST</b></ul></figure> 
-            <canvas id = "game-canvas" width = "1200%" height="480"></canvas>
-        </div>
+        <div id="about">
+        <a class="github-button" href="https://github.com/davidcabuay" target="_blank" aria-label="@andrehanna8 on GitHub">
+            <img src="src/scripts/GitHub-Mark.png">
+        </a>
+        <a class="linkedin-button" href="https://www.linkedin.com/in/david-cabuay-48a83172/?originalSubdomain=ca">
+            <img src="src/scripts/LI-In-Bug.png">
+        </a>
+    </div>
+</div>
+<div id="startpage">
+    <h2>Instructions</h2>
+    <h3>Select the correct items within the time limit to defuse the bomb!</h3>
+    <h3><button id="initialize">START</button></h3>
+</div>
+
+
+<div id="gamepage" hidden="true">
+    <div id="winpage">
+        <p id="winMessage">You Defused the bomb!!</p>
+        <br>
+        <button id="homebutton">Go Back To Homepage</button>
     </div>
     
+    <div id="losepage">
+        <p id="loseMessage">You Died!!</p>
+        <br>
+        <button id="losebutton">Go Back To Homepage</button>
+    </div>
+    <div class="bomb">
+        <img id="bombimg" src= "/src/scripts/bomb.png" >
+        <p id="timer"></p>
+    </div>
+    <div class ="listboard">
+        <figure class="listback "><ul id="reflist"><b>BOMB DEFUSAL LIST</b></ul></figure> 
+        <canvas id = "game-canvas" width = "1200%" height="480"></canvas>
+    </div>
+</div>
+
 </body>
 </html>

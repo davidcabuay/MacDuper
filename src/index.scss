@@ -1,12 +1,14 @@
 #game-canvas {
     border: 1px solid black;
-    position: relative;
-    // top: 100px;
+    position: absolute;
+    top: 170px;
+    left: 380px;
+    cursor: pointer;
     }
 
-#game-canvas :hover {
-    transform: scale(1.5)
-}
+// #game-canvas :hover {
+//     transform: scale(1.5)
+// }
 
 .item-image {
     height: 30px;
@@ -24,6 +26,9 @@
 body{
     background-image: url("../src/scripts/startback.png");
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     
     //<a href="https://www.freepik.com/free-vector/house-attic-with-old-broken-furniture-dust-web_6993965.htm#query=cartoon%20storage%20room&position=9&from_view=search&track=ais">Image by upklyak</a> on Freepik
 
@@ -51,7 +56,7 @@ body{
 
 .bomb {
     position: relative;
-    left: 330px;
+    left: 380px;
 }
 #timer {
     position:absolute;
@@ -67,8 +72,159 @@ h1{
     font-weight: bold;
     color: silver;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: maroon;
 }
 
 .found {
     text-decoration: line-through;
 }
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#startpage {
+    // background-image: url("../src/scripts/startback.png");
+    position: absolute;
+    top: 280px;
+    left: 310px;
+    height: 600px;
+    width: 1100px;
+    background-size: cover;
+    margin: auto;
+    // border: 5px solid black;
+}
+
+#startpage > * {
+    position: relative;
+    top: 10px;
+    
+}
+
+#winpage {
+    display: none;
+    position: absolute;
+    left: 25%;
+    z-index: 2;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    background-color: rgba(245, 245, 245, 0.464);
+    
+}
+#homebutton {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+}
+
+.github-button {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 50px;
+ }
+.linkedin-button {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 50px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+#about {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#winMessage {
+    margin-top: -100px;
+    font-size: larger;
+}
+
+
+#homebutton {
+    background-color: #D7D0D0;
+    border-style: solid black 2px;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 60px;
+    width: 175px;
+    margin: 10px;
+}
+
+#initialize {
+    display: flex;
+    background-color: #D7D0D0;
+    border-style: solid black 2px;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 60px;
+    width: 175px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 500px;
+}
+
+#losepage {
+    display: none;
+    position: absolute;
+    left: 25%;
+    z-index: 1;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    background-color: rgba(245, 245, 245, 0.464);
+    
+}
+
+#loseMessage {
+    margin-top: -100px;
+    font-size: larger;
+}
+
+#losebutton {
+    background-color: #D7D0D0;
+    border-style: solid black 2px;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 60px;
+    width: 175px;
+    margin: 10px;
+}
+
+font-face {
+    font-family: 'Dimis';
+    src: url('assets/DIMIS___.TTF');
+  }
