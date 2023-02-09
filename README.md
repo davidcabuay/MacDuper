@@ -102,7 +102,7 @@ The technologies that will be implemented in this project inlcudes, but not limi
 ## Future implementations:
 
 - Add different levels of difficulty
-- Add more items to the
+- Display items with different sizes and hitboxes
 - Add different background settings
 - Add animations when items are selected
 - Refactor code
