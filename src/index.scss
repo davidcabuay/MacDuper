@@ -21,11 +21,12 @@
 }
 
 body{
-    background-image: url("assets/startback.png");
+    background-image: url("../assets/startback.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    // background-color: aqua;
     
     //<a href="https://www.freepik.com/free-vector/house-attic-with-old-broken-furniture-dust-web_6993965.htm#query=cartoon%20storage%20room&position=9&from_view=search&track=ais">Image by upklyak</a> on Freepik
 
@@ -221,7 +222,7 @@ h3 {
     margin: 10px;
 }
 
-font-face {
-    font-family: 'Dimis';
-    src: url('assets/DIMIS___.TTF');
-  }
+// font-face {
+//     font-family: 'Dimis';
+//     src: url('assets/DIMIS___.TTF');
+//   }
