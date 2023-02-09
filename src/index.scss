@@ -21,7 +21,7 @@
 }
 
 body{
-    background-image: url("src/scripts/startback.png");
+    background-image: url("assets/startback.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -89,7 +89,7 @@ h3 {
 }
 
 #startpage {
-    // background-image: url("../src/scripts/startback.png");
+    
     position: absolute;
     top: 280px;
     left: 310px;
@@ -97,7 +97,7 @@ h3 {
     width: 1100px;
     background-size: cover;
     margin: auto;
-    // border: 5px solid black;
+
 }
 
 #startpage > * {
