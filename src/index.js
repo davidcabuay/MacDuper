@@ -2,7 +2,8 @@
 document.addEventListener("DOMContentLoaded",() => {
 
     const canvas= document.getElementById("game-canvas");
-    const ctx = canvas.getContext("2d")
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "url('assets/background.png')"
 
 
 const  itemArr = [
@@ -308,7 +309,6 @@ const randomCoordinate = function(){
 function createBoard(){
     for(let i = 0; i < itemArr.length; i++){
         const item = new Image();
-        // console.log(canvas.offsetHeight)
         const xy = randomCoordinate();
         item.src = itemArr[i].img;
         item.addEventListener('load', function(){
@@ -316,7 +316,6 @@ function createBoard(){
             // Add click event listener for each image
             canvas.addEventListener("click", function(e) {
                 // Check if the click was inside the image bounds
-                // console.log(e.x, xy[0], e.y, xy[1])
                 const rect = canvas.getBoundingClientRect();
                 const topDistance = Math.floor(rect.top);
                 const leftDistance = Math.floor(rect.left);
@@ -333,11 +332,9 @@ function createBoard(){
 
 function pickItem(id, item) {
     const matched = match(id);
-    // console.log(matched);
     if (matched !== undefined) {
         nice.play()
         const listEntry = matched;
-        console.log(listEntry)
         listEntry.className = "found";
         foundItems.push(listEntry);
         // item.removeEventListener('click', pickItem);
@@ -347,24 +344,16 @@ function pickItem(id, item) {
     }
 }
 
-// function currentSound(){
-//     if c
-// }
 
 function match(id) {
     let match = undefined;
-    // console.log(id + " parameter id");
     listHash.forEach(ele => {
         let listId = ele.getAttribute('data-id');
-        console.log(listId + " list ID")
-        console.log(id + " parameter id")
         listId = listId
         if (parseInt(listId) === parseInt(id)) {
-            console.log("listID === parameter id")
             match = ele;
         }
     });
-    console.log(match)
     return match;
 }
 
@@ -419,8 +408,6 @@ function startGame(){
     document.body.style.backgroundImage = "url('assets/background.png')"
     gamepage.removeAttribute("hidden")
     title.removeAttribute("hidden")
-    //removechild
-    //coundown 3,2,1 print on screen
     backMusic.play()
     createList();
     setTimeout(() => {startTimer(20);

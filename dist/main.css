@@ -6,6 +6,7 @@
   top: 170px;
   left: 380px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 #bombimg {
@@ -21,6 +22,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  max-width: 100%;
 }
 
 #timer {
@@ -45,7 +47,7 @@ body {
   width: 220px;
   font-family: Rajdhani;
   font-size: medium;
-  font-size: large;
+  font-size: 25px;
   margin: 5px;
 }
 
