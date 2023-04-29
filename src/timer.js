@@ -14,7 +14,7 @@ class Timer{
                 clearInterval(t);
                 document.getElementById("timer").innerHTML = "YOU EXPLODED INTO BITS!!"
             }
-        }, 1000)
+        }, 10000)
     }
 }
 
