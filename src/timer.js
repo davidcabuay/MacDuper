@@ -12,7 +12,7 @@ class Timer{
 
             if (remain < 0){
                 clearInterval(t);
-                document.getElementById("timer").innerHTML = "YOU EXPLODED INTO BITS!!"
+                document.getElementById("timer").innerHTML = "YOU EXPLODED INTO pieces!!"
             }
         }, 10000)
     }
